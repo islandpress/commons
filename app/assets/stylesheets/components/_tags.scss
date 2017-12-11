@@ -17,6 +17,14 @@
     border: 1px solid $gc-blue-gray;
   }
 
+  &__tag--black {
+    float: none;
+    color: $gc-dark-gray;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
   &__tag--white {
     float: none;
     color: #fff;
