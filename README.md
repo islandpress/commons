@@ -84,7 +84,7 @@ Using the ElasticSearch Index
 Anything added, created, or deleted in the `Resource` model will automatically be indexed in ElasticSearch. If you'd like to recreate the index for any reason, you can use the following rake task:
 
 ```
-bundle exec rake elasticsearch:reset_resource_index
+rake elasticsearch:reset:all_indices
 ```
 
 This will delete the index and re-import all the records in the resources table.

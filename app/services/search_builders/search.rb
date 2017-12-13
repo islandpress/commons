@@ -37,7 +37,7 @@ module SearchBuilders
         filters: @filters,
         sort: @sort,
         only_models: @models
-      ).search.filter_by_date.filter_by_resource_type.sort
+      ).filter_by_date.filter_by_resource_type.filter_by_publisher.search.sort
     end
   end
 end

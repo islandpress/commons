@@ -20,6 +20,11 @@ module SearchBuilders
       self
     end
 
+    def filter_by_publisher
+      @es_params = SearchBuilders::PublisherFilter.new(@filters, @es_params).build
+      self
+    end
+
     def filter_by_date
       @es_params = SearchBuilders::DateFilter.new(@filters, @es_params).build
       self

@@ -38,6 +38,7 @@ gem 'selectize-rails'
 gem 'scout_apm'
 gem 'pdf-reader'
 gem 'rollbar'
+gem 'inline_svg'
 
 group :production do
   gem 'sendgrid-ruby'

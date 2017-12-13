@@ -16,9 +16,6 @@
                       = @resource.resource_type.pluralize.capitalize
                   .col-xs-12.col-sm-6.col-md-8
                     .resource-actions.resource-actions--align-middle
-                      = link_to '#', class: 'resource-actions__button btn btn-white resource-actions__button--right' do
-                        | Export
-                        i.fa.fa-share.glyphicon--left
                       - if policy(@resource).edit?
                         = link_to edit_resource_path(@resource), class: "resource-actions__button btn btn-white resource-actions__button--right" do
                           | Edit

@@ -1,0 +1,19 @@
+<div class='page-details--creme-bg'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class='form-box'>
+			<h1 id="initial-idea">Content</h1>
+			<p>What content is in the platform.</p>
+			.container-fluid
+				.row
+				Who uses the platform.
+				= link_to "View CSV", resource_path(@books, format: :csv)
+				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
+				<br>
+				= render 'shared/components/demo_resource_details', publisher_name: 'Dog Post'
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

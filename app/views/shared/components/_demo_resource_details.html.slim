@@ -1,0 +1,9 @@
+.demo-resource-details
+  .row
+    .col-xs-12
+      = link_to search_path(query: 'test'), class: 'resource-details__see-more' do
+        | Test
+	  .b
+	  - rtypes = Hash[Resource::RESOURCE_TYPES.keys.map {|x| ["#{x}".pluralize, 'on']}]
+      = link_to search_path(query: '', filters: { publisher: publisher_name, model_types: {resources: 'on'}, resource_types: rtypes, sort: 'score' }), class: 'resource-details__see-more' do
+        | Pubs

@@ -4,6 +4,16 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/privacypolicy', to: 'static_pages#policy', as: :policy
   get '/about', to: 'static_pages#about', as: :about
+  get '/demo1', to: 'static_pages#demo1', as: :demo1
+  get '/demo2', to: 'static_pages#demo2', as: :demo2
+  get '/demo3', to: 'static_pages#demo3', as: :demo3
+  get '/demo4', to: 'static_pages#demo4', as: :demo4
+  get '/demo5', to: 'static_pages#demo5', as: :demo5
+  get '/demo6', to: 'static_pages#demo6', as: :demo6
+  get '/demo7', to: 'static_pages#demo7', as: :demo7
+  get '/demo8', to: 'static_pages#demo8', as: :demo8
+  get '/demo9', to: 'static_pages#demo9', as: :demo9
+  get '/demo10', to: 'static_pages#demo10', as: :demo10
 
   # External API routes
   namespace :api do

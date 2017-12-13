@@ -17,6 +17,14 @@ RSpec.describe SearchBuilders::Builder do
     end
   end
 
+  describe '#filter_by_publisher' do
+    it 'sends "build" to SearchBuilders::PublisherFilter and returns itself' do
+      expect_any_instance_of(SearchBuilders::PublisherFilter).to receive(:build)
+      builder = SearchBuilders::Builder.new(query: 'test')
+      expect(builder.filter_by_publisher).to eq(builder)
+    end
+  end
+
   describe '#models' do
     it 'sends "build" to SearchBuilders::ModelLister' do
       expect_any_instance_of(SearchBuilders::ModelLister).to receive(:build)
