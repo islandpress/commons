@@ -6,12 +6,16 @@
 			<h1 id="initial-idea">Content</h1>
 			<p>What content is in the platform.</p>
 			.container-fluid
-				.row
-				Who uses the platform.
-				= link_to "View CSV", resource_path(@books, format: :csv)
+		      .row
+				.b
 				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
-				<br>
-				= render 'shared/components/demo_resource_details', publisher_name: 'Dog Post'
+				.b
+				= render 'shared/components/demo-publishers-dropdown', publisher_arr: @publisher_arr
+				.b
+				= link_to @specific_book1.title, resource_path(@specific_book1.id)
+				.b
+			    - rec = Resource.find_by_sql("select * from resources where title = '%s'" % "Vile Bodies").first
+				= link_to rec.title, resource_path(rec.id)
         </div>
       </div>
     </div>

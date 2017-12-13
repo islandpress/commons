@@ -16,16 +16,16 @@ class StaticPagesController < ApplicationController
 
   def demo2
     @books = Resource.books.order('RANDOM()').first(6)
-    @specific_book1 = Resource.find_by_sql("select * from resources where title = 'Heaven and Earth'").first(1)
-    @specific_book2 = Resource.find_by_sql("select * from resources where title = 'In Death Ground'").first(1)
+    @specific_book1 = Resource.find_by_sql("select * from resources where title = 'Heaven and Earth'").first
+    @specific_book2 = Resource.find_by_sql("select * from resources where title = 'In Death Ground'").first
     q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' is not null order by metadata->>'publisher' asc;"
 	@publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
 	#Rails.logger.info()
   end
 
   def demo9
-    @specific_book1 = Resource.find_by_sql("select * from resources where title = 'Heaven and Earth'").first(1)
-    @specific_book2 = Resource.find_by_sql("select * from resources where title = 'In Death Ground'").first(1)
+    @specific_book1 = Resource.find_by_sql("select * from resources where title = 'Heaven and Earth'").first
+    @specific_book2 = Resource.find_by_sql("select * from resources where title = 'In Death Ground'").first
   end
 
   def policy; end
