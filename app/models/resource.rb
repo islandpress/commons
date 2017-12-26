@@ -7,16 +7,19 @@ class Resource < ApplicationRecord
 
   RESOURCE_TYPES = {
     article: 0,
-    book: 1,
-    report: 2,
-    url: 3,
-    audio: 4,
-    course: 5,
-    dataset: 6,
-    image: 7,
-    syllabus: 8,
-    video: 9,
-    profile: 10
+    audio: 1,
+    book: 2,
+    course: 3,
+    dataset: 4,
+    image: 5,
+    post: 6,
+    profile: 7,
+    report: 8,
+    slide: 9,
+    software: 10,
+    syllabus: 11,
+    url: 12,
+    video: 13
   }.freeze
 
   METADATA_FIELDS = %w(

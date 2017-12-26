@@ -202,7 +202,8 @@
             "properties": {
                 "resource_type": {
                     "enum": ["article", "audio", "book", "course", "dataset", 
-                    		 "image", "report", "syllabus", "video", "profile"],
+                    		 "image", "report", "syllabus", "video", "profile",
+                    		 "slide", "post", "software"],
                     "title": "Resource Type"
                 },
                 "user_id": {

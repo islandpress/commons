@@ -48,4 +48,16 @@ FactoryGirl.define do
   factory :profile, parent: :resource do
     resource_type { :profile }
   end
+
+  factory :slide, parent: :resource do
+    resource_type { :slide }
+  end
+
+  factory :post, parent: :resource do
+    resource_type { :post }
+  end
+
+  factory :software, parent: :resource do
+    resource_type { :software }
+  end
 end

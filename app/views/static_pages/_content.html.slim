@@ -30,35 +30,71 @@
                 .item
                   .row
                     .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Images',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:image]],
+                                                                     list: @videos,
+                                                                     resource_type: :image
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Videos',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:video]],
+                                                                     list: @videos,
+                                                                     resource_type: :video
+                    .col-xs-12.col-sm-4.col-md-4
                       = render 'shared/components/resource_details', title: 'Audio',
                                                                      count: @counts[Resource::RESOURCE_TYPES[:audio]],
-                                                                     list: @audios,
+                                                                     list: @audio,
                                                                      resource_type: :audio
+	            .item
+                  .row
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Slides',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:slide]],
+                                                                     list: @slides,
+                                                                     resource_type: :slide
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Syllabi',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:syllabus]],
+                                                                     list: @syllabi,
+                                                                     resource_type: :syllabus
                     .col-xs-12.col-sm-4.col-md-4
                       = render 'shared/components/resource_details', title: 'Courses',
                                                                      count: @counts[Resource::RESOURCE_TYPES[:course]],
                                                                      list: @courses,
                                                                      resource_type: :course
+	            .item
+                  .row
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Posts',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:post]],
+                                                                     list: @posts,
+                                                                     resource_type: :post
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Profiles',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:profile]],
+                                                                     list: @profiles,
+                                                                     resource_type: :profile
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Urls',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:url]],
+                                                                     list: @urls,
+                                                                     resource_type: :url
+                .item
+                  .row
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Software',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:software]],
+                                                                     list: @software,
+                                                                     resource_type: :software
                     .col-xs-12.col-sm-4.col-md-4
                       = render 'shared/components/resource_details', title: 'Datasets',
                                                                      count: @counts[Resource::RESOURCE_TYPES[:dataset]],
                                                                      list: @datasets,
                                                                      resource_type: :dataset
-                .item
-                  .row
-                    .col-xs-12.col-sm-4.col-md-4
-                      = render 'shared/components/resource_details', title: 'Syllabi',
-                                                                     count: @counts[Resource::RESOURCE_TYPES[:syllabus]],
-                                                                     list: @syllabuses,
-                                                                     resource_type: :syllabus
-                    .col-xs-12.col-sm-4.col-md-4
-                      = render 'shared/components/resource_details', title: 'Video',
-                                                                     count: @counts[Resource::RESOURCE_TYPES[:video]],
-                                                                     list: @videos,
-                                                                     resource_type: :video
           .row
             .col-xs-12.col-md-8.col-md-offset-2
               ol.carousel-indicators.gc-carousel-indicators
                 li.gc-carousel-indicator.active data-slide-to="0" data-target="#carousel-content"
                 li.gc-carousel-indicator data-slide-to="1" data-target="#carousel-content"
                 li.gc-carousel-indicator data-slide-to="2" data-target="#carousel-content"
+                li.gc-carousel-indicator data-slide-to="3" data-target="#carousel-content"
+                li.gc-carousel-indicator data-slide-to="4" data-target="#carousel-content"

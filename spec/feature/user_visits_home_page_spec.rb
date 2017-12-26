@@ -9,7 +9,7 @@ RSpec.feature 'User visits home page' do
 
     expect(find('#filters_model_types_lists')['checked']).to eq(false)
     expect(find('#filters_model_types_networks')['checked']).to eq(false)
-    %w(article report audio url image profile course dataset syllabus video).
+    %w(article report audio url image profile course dataset syllabus video slide post software).
       each do |resource_type|
       expect(find("#filters_resource_types_#{resource_type.pluralize}")['checked']).to eq(false)
     end

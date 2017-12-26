@@ -15,22 +15,33 @@ RSpec.describe StaticPagesController, type: :request do
         4 => 20,
         5 => 20,
         6 => 20,
+        7 => 20,
         8 => 20,
         9 => 20
+        10 => 20
+        11 => 20
+        12 => 20
+        13 => 20
+        14 => 20
       }
     end
 
     before do
       20.times do
         create(:network)
-        create(:book)
         create(:article)
-        create(:url)
         create(:audio)
-        create(:report)
+        create(:book)
         create(:course)
         create(:dataset)
+        create(:image)
+        create(:post)
+        create(:profile)
+        create(:report)
+        create(:slide)
+        create(:software)
         create(:syllabus)
+        create(:url)
         create(:video)
       end
       perform_request
@@ -44,7 +55,7 @@ RSpec.describe StaticPagesController, type: :request do
       expect(assigns(:networks).count).to eq(10)
     end
 
-    %i(article book report audio course dataset syllabus video).
+    %i(article book report audio course dataset syllabus video slide post software).
       each do |resource_type|
 
       it "assigns 6 random #{resource_type}" do

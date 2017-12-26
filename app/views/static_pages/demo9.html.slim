@@ -1,0 +1,10 @@
+.container-fluid
+	.row
+	Who uses the platform.
+	= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
+	<br>
+	= render 'shared/components/resource_details', title: 'Books',
+												 count:[0],
+	                                             list: @specific_book1,
+	                                             resource_type: :book
+= render 'shared/demo_footer'

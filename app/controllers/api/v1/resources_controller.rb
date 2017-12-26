@@ -41,7 +41,8 @@ module Api
       def resource_params
         params.require(:data).
           require(:attributes).
-          permit(:title, :url)
+          permit(:title, :url, :short_content, :privacy, :creators, :publisher,
+          	     :date, :rights, :pages, :isbn)
       end
     end
   end

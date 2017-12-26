@@ -5,24 +5,27 @@
   background-position: center top;
 
   &__hero {
-    padding-top: 127px;
+    padding-top: 5px;
     text-align: center;
   }
 
   &__hero-title {
+    font-family: Icomoon;
     color: #fff;
     font-size: 60px;
     letter-spacing: 0;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
   &__hero-subtitle {
+    font-family: Icomoon;
     color: #fff;
     font-size: 18px;
     letter-spacing: 0;
     margin-top: 0;
     font-weight: lighter;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   &__hero-search {
@@ -33,6 +36,8 @@
     }
 
     &-input {
+	  color: $gc-dark-gray;
+
       width: 100% !important;
       height: 56px;
       padding-left: 25px !important;
@@ -52,13 +57,13 @@
   }
 
   &__hero-hint {
-    color: #fff;
+    color: $gc-dark-gray;
     width: 100%;
     border-radius: 30px;
     // padding: 4px 12px;
     padding: 6px 16px;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.17);
+    background-color: rgba(0, 0, 0, 0.17);
     line-height: 18px;
     font-size: 12px;
     text-align: center;
@@ -73,17 +78,19 @@
   }
 
   &__hero-link {
-    color: #fff;
+    color: $gc-dark-gray;
     text-decoration: underline;
   }
 
   &__hero-tags {
+    color: $gc-dark-gray;
     margin-top: 40px;
     text-align: center;
   }
 
   &__hero-boxes {
-    margin-top: 80px;
+    margin-top: 70px;
+    margin-bottom: 80px;
   }
 }
 

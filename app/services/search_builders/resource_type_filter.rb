@@ -1,17 +1,20 @@
 module SearchBuilders
   class ResourceTypeFilter
     RESOURCE_TYPE_FILTERS = {
-      books: 'book',
       articles: 'article',
-      reports: 'report',
-      urls: 'url',
-      audios: 'audio',
+      audio: 'audio',
+      books: 'book',
       courses: 'course',
       datasets: 'dataset',
       images: 'image',
-      syllabuses: 'syllabus',
-      videos: 'video',
-      profiles: 'profile'
+      posts: 'post',
+      profiles: 'profile',
+      reports: 'report',
+      slides: 'slide',
+      software: 'software',
+      syllabi: 'syllabus',
+      urls: 'url',
+      videos: 'video'
     }.freeze
 
     def initialize(filters, es_params)
