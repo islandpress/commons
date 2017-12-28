@@ -24,18 +24,15 @@
     .filters__title.text-xs-left.text-center
       h6
         | Tags
-        span.filters__clear= link_to 'Clear', root_path, class: 'gray-light pull-right'
     .tags-list
       - ActsAsTaggableOn::Tag.most_used(10).each do |tag|
         = link_to "##{tag.name} (#{tag.taggings_count})", search_path(query: "##{tag.name}"), class: 'tags-list__tag'
         .clearfix
     .filters__tags-show-more
-      = link_to 'Show more', root_path
   .filters
     .filters__title.text-xs-left.text-center
       h6
         | Date
-        span.filters__clear= link_to 'Clear', root_path, class: 'gray-light pull-right'
 
     .form-group.has-feedback
       input name="daterange" data={ start: @filters ? @filters[:start] : '', end: @filters ? @filters[:end] : '' } type="text" class='form-control fw'
