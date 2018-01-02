@@ -1,3 +1,5 @@
+require 'csv'
+
 class List < ApplicationRecord
   include Indexable
   include Taggable
@@ -39,4 +41,5 @@ class List < ApplicationRecord
     json['name_suggest'] = { input: name.split(' ') }
     json
   end
+
 end
