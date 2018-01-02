@@ -87,9 +87,13 @@
                             td= api_key.secret_key
 
               .row
-                .col-xs-12.col-md-3.col-md-offset-9
-                  .form-group
-                    = f.submit 'Update', class: "form-control btn btn-gc"
+        		.pull-right
+                  .col-xs-12.col-md-6
+                    .form-group
+  		              = link_to_back('Cancel', class: 'btn btn-white')
+                  .col-xs-12.col-md-6
+                    .form-group
+                      = f.submit 'Update', class: "form-control btn btn-gc"
                         
       .col-xs-12.col-md-4
         .form-box.form-box--no-top-margin
@@ -99,5 +103,8 @@
                 .text-center
                   = image_tag(@user.avatar_url, class: 'avatar profile-details__picture')
             .row
+              .col-xs-12
+                .p class="control-label"
+                  th.control-label Select avatar then update
               .col-xs-12
                 = f.file_field :avatar, class: "control-label"
