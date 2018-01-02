@@ -22,8 +22,10 @@ module SearchBuilders
     end
 
     def filter_by_publisher
-	  q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' is not null order by metadata->>'publisher' asc;"
-	  Rails.logger.info(ActiveRecord::Base.connection.execute(q).values.flatten)
+      q = "select distinct metadata->>'publisher' from resources where "\
+          "metadata->>'publisher' is not null order by "\
+          "metadata->>'publisher' asc;"
+      Rails.logger.info(ActiveRecord::Base.connection.execute(q).values.flatten)
       @es_params[:query][:bool][:filter][:bool][:must] << {
         match_phrase: { 'metadata.publisher': @filters[:publisher] }
       }

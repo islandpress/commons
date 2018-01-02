@@ -34,7 +34,7 @@ RSpec.describe Resource do
         context 'when the user provides the resource data' do
           let(:user_input) { true }
 
-          context 'when the content_download_link is provided' do # rubocop:disable RSpec/NestedGroups
+          context 'when the content_download_link is provided' do
             let(:file_url) { '/path/to/file.pdf' }
 
             it 'enqueues a job for proccess a file' do
@@ -42,7 +42,7 @@ RSpec.describe Resource do
                 with(resource.id)
             end
           end
-          context 'when the content_download_link is not provided' do # rubocop:disable RSpec/NestedGroups
+          context 'when the content_download_link is not provided' do
             let(:file_url) { nil }
 
             it 'does not enqueue a job for proccess a file' do
@@ -52,7 +52,7 @@ RSpec.describe Resource do
         end
         context 'when the resource data is not provided by a user' do
           let(:user_input) { false }
-          
+
           it 'does not enqueue a job for proccess a file' do
             expect(ProcessResourceFileJob).not_to have_received(:perform_async)
           end

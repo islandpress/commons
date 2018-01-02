@@ -10,9 +10,9 @@
 #   inflect.uncountable %w( fish sheep )
 # end
 ActiveSupport::Inflector.inflections do |inflect|
-    inflect.irregular 'audio', 'audio'
-    inflect.irregular 'syllabus', 'syllabi'
-    inflect.irregular 'software', 'software'
+  inflect.irregular 'audio', 'audio'
+  inflect.irregular 'syllabus', 'syllabi'
+  inflect.irregular 'software', 'software'
 end
 
 # These inflection rules are supported but not enabled by default:

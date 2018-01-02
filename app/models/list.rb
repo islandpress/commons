@@ -41,5 +41,4 @@ class List < ApplicationRecord
     json['name_suggest'] = { input: name.split(' ') }
     json
   end
-
 end

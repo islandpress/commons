@@ -42,7 +42,7 @@ module Api
         params.require(:data).
           require(:attributes).
           permit(:title, :url, :short_content, :privacy, :creators, :publisher,
-          	     :date, :rights, :pages, :isbn)
+                 :date, :rights, :pages, :isbn)
       end
     end
   end

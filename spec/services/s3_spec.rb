@@ -34,7 +34,7 @@ RSpec.describe S3, type: :service do
 
   describe '#fetch_file' do
     let(:fetch_file) { S3.new.fetch_file('test.pdf') }
-    
+
     it 'retrieves the file' do
       expect(fetch_file.class.name).to eq('Fog::Storage::AWS::File')
     end

@@ -69,9 +69,7 @@ class ResourcesController < ApplicationController
   end
 
   def load_resource_types
-  	# TODO: understand why these 4 are treated differently here!
-#    @resource_types = (Resource::RESOURCE_TYPES.keys - %w(audio video image url)).sort
-    @resource_types = (Resource::RESOURCE_TYPES.keys).sort
+    @resource_types = Resource::RESOURCE_TYPES.keys.sort
   end
 
   def resource_created_message

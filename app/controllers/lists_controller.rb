@@ -38,15 +38,17 @@ class ListsController < ApplicationController
     CSV.generate(headers: true) do |csv|
       csv << list_attributes + item_attributes
       items.each do |item|
-      	if item.send('item_type') == 'Resource'
-		    resource = Resource.find(item.send('item_id'))
-			csv << list_attributes.map{ |attr| item.send(attr) } + 
-				[resource.name, resource.tag_list, resource.short_content, resource.url]
-		elsif item.send('item_type') == 'Network'
-		    network = Network.find(item.send('item_id'))
-        	csv << list_attributes.map{ |attr| item.send(attr) } + 
-        		[network.name, network.tag_list, network.short_description, nil]
-		end
+        if item.send('item_type') == 'Resource'
+          resource = Resource.find(item.send('item_id'))
+          csv << list_attributes.map { |attr| item.send(attr) } +
+                 [resource.name, resource.tag_list,
+                  resource.short_content, resource.url]
+        elsif item.send('item_type') == 'Network'
+          network = Network.find(item.send('item_id'))
+          csv << list_attributes.map { |attr| item.send(attr) } +
+                 [network.name, network.tag_list,
+                  network.short_description, nil]
+        end
       end
     end
   end
