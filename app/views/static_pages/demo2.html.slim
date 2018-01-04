@@ -3,7 +3,7 @@
     <div class='row'>
       <div class='col-xs-12'>
         <div class='form-box'>
-			<h1 id="initial-idea">Content</h1>
+			<h1 id="content-sources">Content Sources</h1>
 			<p>What content is in the platform.</p>
 			.container-fluid
 		      .row
@@ -16,6 +16,8 @@
 				.b
 			    - rec = Resource.find_by_sql("select * from resources where title = '%s'" % "Vile Bodies").first
 				= link_to rec.title, resource_path(rec.id)
+			<h1 id="publishers">Publishers</h1>
+			<p></p>
         </div>
       </div>
     </div>

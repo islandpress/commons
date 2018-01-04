@@ -23,9 +23,9 @@ class StaticPagesController < ApplicationController
   def demo2
     @books = Resource.books.order('RANDOM()').first(6)
     @specific_book1 = Resource.find_by_sql('select * from resources where title = '\
-                                           '"An Acceptable Time"').first
+                                           "'An Acceptable Time'").first
     @specific_book2 = Resource.find_by_sql('select * from resources where title = '\
-                                           '"An Instant In The Wind"').first
+                                           "'An Instant In The Wind'").first
     q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' "\
         "is not null order by metadata->>'publisher' asc;"
     @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten

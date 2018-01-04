@@ -4,41 +4,104 @@
 	  <div class="col-12 col-sm-12 col-lg-12">
         <div class='form-box'>
           <h1>Browser Extensions</h1>
-			<p>goto: <a href="chrome://extensions/">chrome://extensions/</a>
-			<p>goto: <a>chrome://extensions/</a>
+            h3
+              | Installation
+	        .p
+	          | The extensions below can be installed from their source as described 
+	          = link_to 'here', 'https://developer.chrome.com/extensions/getstarted#unpacked', class: 'form-box__link', target: '_blank'
+	          | , and will eventually be added to the 
+	          = link_to 'chrome webstore', 'https://chrome.google.com/webstore/category/extensions', class: 'form-box__link', target: '_blank'
+	          | .
+	        h3
+	          | GC Lister
+	          .div class="col-xs-24 col-xs-offset-0"
+	            h4
+	              | Source
+			.div class="col-xs-24 col-xs-offset-1"
+		      = link_to 'github source', 'https://github.com/islandpress/gclister_extension', class: 'form-box__link', target: '_blank'
+	        h4
+	          .div class="col-xs-24 col-xs-offset-0"
+	              | Usage
+			.div class="col-xs-24 col-xs-offset-1"
+              .p
+                | Visit any 
+	            = link_to 'webpage', 'http://grist.org/cities/', class: 'form-box__link', target: '_blank'
+	            | , then click the GC-Lister icon in the top right of the browser.
+	            .br
+	            | You'll see the title and url of the page; click the Send to Green Commons.
+	            .br
+            	= image_tag 'gclister_screengrab.png', :style => "border: 1px solid gray"
+          		<br><br>
 
-			  <a>https://github.com/gtourtellot/BooksInGC</a>
+	        h3
+	          | Books In GC
+	          .div class="col-xs-24 col-xs-offset-0"
+	            h4
+	              | Source
+			.div class="col-xs-24 col-xs-offset-1"
+		      = link_to 'github source', 'https://github.com/islandpress/booksingc_extension', class: 'form-box__link', target: '_blank'
+	        h4
+	          .div class="col-xs-24 col-xs-offset-0"
+	              | Usage
+			.div class="col-xs-24 col-xs-offset-1"
+              p
+                | Visit ...
+		        = link_to 'Risk Criticism', 'https://www.amazon.com/Risk-Criticism-Precautionary-Environmental-Uncertainty/dp/0472053027/ref=sr_1_1?ie=UTF8&qid=1515189780&sr=8-1&keywords=risk+criticism', class: 'form-box__link', target: '_blank'
+		        |  on Amazon
+		        This book, as linked from GC, is freely available in its entirety, thanks to the unglue.it project.
+				<img src="/assets/booksingc_risk_criticism.jpg" height="350" style="border: 1px solid gray"/>
+
+	      .clearfix
+
+          h1
+            | Web Apps
+	        h3
+	          .div class="col-xs-24 col-xs-offset-0"
+	          | Mondrian Transit
+	          h5
+	            .div class="col-xs-24 col-xs-offset-0"
+          		  | Surreptitious discovery among Green Commons resources.
+
+			  <iframe width="1100" height="700" src="https://mondrian-transit.herokuapp.com/"></iframe>
 			  <br>
-			  <a>https://github.com/gtourtellot/GCLister</a>
-
-          <h1>Web Apps</h1>
-
-			  <p>(DW: BTW, this app doesn’t use our api at all. I could have it retrieve the first three GC resources for each NYT article if anyone complains.)
-				  <a>http://www.hyperorg.com/programs/greencommons/TimesMasher/TimesMasher.html</a>
-			  </p>
-			  <iframe width="800" height="430" src="http://localhost/gcBoogyWoogy-master/boogywoogy.html"></iframe>
 			  <br>
-
-			  	  <iframe width="800" height="430" src="http://indc.me/gc_openstates_mashup.html"></iframe>
+	        h3
+	          .div class="col-xs-24 col-xs-offset-0"
+	          | GC - Open States Mashup
+	          .div class="col-xs-24 col-xs-offset-0"
+	            h4
+	              | Source
+			.div class="col-xs-24 col-xs-offset-1"
+		      = link_to 'github source', 'https://github.com/islandpress/', class: 'form-box__link', target: '_blank'
+	        h4
+	          .div class="col-xs-24 col-xs-offset-0"
+	              | Usage
+			.div class="col-xs-24 col-xs-offset-1"
+              p
+          		| Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
+			  <iframe width="1100" height="700" src="http://indc.me/gc_openstates_mashup.html"></iframe>
 			  </p>
 
           <h1>Chatbots</h1>
+	        h3
+	          .div class="col-xs-24 col-xs-offset-0"
+	          | GC Librarian
+	          .div class="col-xs-24 col-xs-offset-0"
+	            h4
+	              | Source
+			.div class="col-xs-24 col-xs-offset-1"
+		      = link_to 'github source', 'https://github.com/islandpress/greencommons-chatbot-fulfillment-webhook', class: 'form-box__link', target: '_blank'
+	        h4
+	          .div class="col-xs-24 col-xs-offset-0"
+	              | Usage
+			.div class="col-xs-24 col-xs-offset-1"
+              p
+      		    | Ask simple questions about Green Commons resources.  Ask "help" to get started.
 			  <br>
-			  <iframe width="800" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/190ed4ed-7d37-4369-b372-3ab3463a22cc"></iframe>
+			  <iframe width="1100" height="400" src="https://console.dialogflow.com/api-client/demo/embedded/190ed4ed-7d37-4369-b372-3ab3463a22cc"></iframe>
 			  <br>
 			  <a>https://github.com/gtourtellot/greencommons-chatbot-fulfillment-webhook</a>
 
-			  <p>some keywords are very general, e.g., "foundation", "federal government", "north", so "augmented" info isn't at all relevant to the query.
-				  <a>http://hyperorg.com/programs/greencommons/dpla/gc-dpla.html</a>
-			  </p>
-
-			  <p>(still links to domain "greencommons.herokuapp.com")(the name "BoogyWoogy" is brutal)
-				  <a>http://hyperorg.com/programs/greencommons/boogywoogybrowser/boogywoogy.html</a>
-				  <a>https://github.com/dweinberger/gcBoogyWoogy</a>
-			  </p>
-
-		  <h1>Courses</h1>
-			  <p>??course??</p>
         </div>
       </div>
     </div>
