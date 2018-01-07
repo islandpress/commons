@@ -3,12 +3,13 @@
     <div class='row'>
       <div class='col-xs-12'>
         <div class='form-box'>
-			<h1 id="content-sources">Content Sources</h1>
+			<h1 id="content-sources">Content</h1>
+			<h2 id="subscriptions">Subscriptions</h1>
+			<h1 id="publishers">Publishers</h1>
 			<p>What content is in the platform.</p>
 			.container-fluid
 		      .row
 				.b
-				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
 				.b
 				= render 'shared/components/demo-publishers-dropdown', publisher_arr: @publisher_arr
 				.b
@@ -16,7 +17,8 @@
 				.b
 			    - rec = Resource.find_by_sql("select * from resources where title = '%s'" % "Vile Bodies").first
 				= link_to rec.title, resource_path(rec.id)
-			<h1 id="publishers">Publishers</h1>
+				.b
+				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
 			<p></p>
         </div>
       </div>
