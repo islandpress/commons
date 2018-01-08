@@ -20,9 +20,9 @@ test:
   override:
     - bundle exec rspec
 
-deployment:
-  production:
-    branch: master
-    commands:
-      - git push git@heroku.com:greencommons.git $CIRCLE_SHA1:master
-      - heroku run 'rake db:migrate' --app greencommons
+# deployment:
+#   production:
+#     branch: master
+#     commands:
+#       - git push git@heroku.com:greencommons.git $CIRCLE_SHA1:master
+#       - heroku run 'rake db:migrate' --app greencommons
