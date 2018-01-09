@@ -52,7 +52,7 @@ namespace :elasticsearch do
   namespace :create do
     def create_index(klass)
       ap "Creating #{klass.name} index"
-      klass.__elasticsearch__.create_index!
+      klass.__elasticsearch__.create_index! force: true
       ap "Indexing #{klass.name} records"
       klass.import
     end

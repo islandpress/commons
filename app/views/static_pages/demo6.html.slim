@@ -16,7 +16,7 @@
 	          | GC Lister
 	          .div class="col-xs-24 col-xs-offset-0"
 	            h4
-	              | Source
+	              | About
 			.div class="col-xs-24 col-xs-offset-1"
 		      = link_to 'github source', 'https://github.com/islandpress/gclister_extension', class: 'form-box__link', target: '_blank'
 	        h4
@@ -26,30 +26,32 @@
               .p
                 | Visit any 
 	            = link_to 'webpage', 'http://grist.org/cities/', class: 'form-box__link', target: '_blank'
-	            | , then click the GC-Lister icon in the top right of the browser.
+	            | , then click the GC-Lister icon in the top right of the browser. You'll see the title and url of the page; click the Send to Green Commons.
 	            .br
-	            | You'll see the title and url of the page; click the Send to Green Commons.
-	            .br
-            	= image_tag 'gclister_screengrab.png', :style => "border: 1px solid gray"
+            	= image_tag 'gclister_screengrab.jpg', :style => "border: 1px solid gray"
           		<br><br>
 
 	        h3
 	          | Books In GC
 	          .div class="col-xs-24 col-xs-offset-0"
 	            h4
-	              | Source
+	              | About
 			.div class="col-xs-24 col-xs-offset-1"
+			  | When browsing books in Amazon and Goodreads, automatically see information about availability in the Green Commons.
+			  .br
 		      = link_to 'github source', 'https://github.com/islandpress/booksingc_extension', class: 'form-box__link', target: '_blank'
 	        h4
 	          .div class="col-xs-24 col-xs-offset-0"
 	              | Usage
 			.div class="col-xs-24 col-xs-offset-1"
               p
-                | Visit ...
+                | For example, view 
 		        = link_to 'Risk Criticism', 'https://www.amazon.com/Risk-Criticism-Precautionary-Environmental-Uncertainty/dp/0472053027/ref=sr_1_1?ie=UTF8&qid=1515189780&sr=8-1&keywords=risk+criticism', class: 'form-box__link', target: '_blank'
-		        |  on Amazon
-		        This book, as linked from GC, is freely available in its entirety, thanks to the unglue.it project.
-				<img src="/assets/booksingc_risk_criticism.jpg" height="350" style="border: 1px solid gray"/>
+		        |  on Amazon.
+		        | This book, as linked from GC, is freely available in its entirety, thanks to the 
+		        = link_to 'unglue.it', 'https://unglue.it/', class: 'form-box__link', target: '_blank'
+		        |  project.
+				= image_tag 'booksingc_risk_criticism.jpg', :style=> "border: 1px solid gray"
 
 	      .clearfix
 
@@ -57,29 +59,45 @@
             | Web Apps
 	        h3
 	          .div class="col-xs-24 col-xs-offset-0"
-	          | Mondrian Transit
-	          h5
-	            .div class="col-xs-24 col-xs-offset-0"
-          		  | Surreptitious discovery among Green Commons resources.
-
-			  <iframe width="1100" height="700" src="https://mondrian-transit.herokuapp.com/"></iframe>
-			  <br>
-			  <br>
-	        h3
+	          | Ideas In Transit
+	        h4
 	          .div class="col-xs-24 col-xs-offset-0"
-	          | GC - Open States Mashup
-	          .div class="col-xs-24 col-xs-offset-0"
-	            h4
-	              | Source
+	              | About
 			.div class="col-xs-24 col-xs-offset-1"
+          	  | Surreptitious discovery among Green Commons resources. 
+          	  .br
 		      = link_to 'github source', 'https://github.com/islandpress/', class: 'form-box__link', target: '_blank'
 	        h4
 	          .div class="col-xs-24 col-xs-offset-0"
 	              | Usage
 			.div class="col-xs-24 col-xs-offset-1"
               p
-          		| Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
-			  <iframe width="1000" height="500" src="http://indc.me/gc_openstates_mashup.html"></iframe>
+          		| Begin by entering a term to search for. After that, clicking on a filled-in square will fetch items that are like it.  See Help for more information.
+
+			  <iframe width="1000" height="700" src="https://mondrian-transit.herokuapp.com/"></iframe>
+			  <br>
+			  <br>
+			  </p>
+	        h3
+	          .div class="col-xs-24 col-xs-offset-0"
+	          | GC - Open States Mashup
+	          .div class="col-xs-24 col-xs-offset-0"
+	            h4
+	              | About
+			.div class="col-xs-24 col-xs-offset-1"
+			  | Geographical visualization of US-based environmental organizations (from GC) and climate change bills (from 
+			  = link_to 'Open States', 'https://openstates.org/', class: 'form-box__link', target: '_blank'
+			  | ).  Interestingly, this example demonstrates using GC resource metadata as a dataset.
+			  .br
+		      = link_to 'github source', 'https://github.com/islandpress/gc_openstates_mashup', class: 'form-box__redlink', target: '_blank'
+	        h4
+	          .div class="col-xs-24 col-xs-offset-0"
+	              | Usage
+			.div class="col-xs-24 col-xs-offset-1"
+              p
+          		| On page 1, select one or more states on the left and view the corresponding number of climate change bills and GC environmental organizations. 
+          		| On page 2 and 3, respectively, view the names of specific organizations and climage bills for a given state.
+			  <iframe width="1000" height="620" src="https://gc-openstates-mashup.herokuapp.com/index.html"></iframe>
 			  </p>
 
           <h1>Chatbots</h1>
@@ -88,8 +106,12 @@
 	          | GC Librarian
 	          .div class="col-xs-24 col-xs-offset-0"
 	            h4
-	              | Source
+	              | About
 			.div class="col-xs-24 col-xs-offset-1"
+			  | Learn the number of GC resources on a given topic. 
+			  | Be shown example GC resources a given topic. 
+			  | Learn what DBpedia says about given topic.
+			  .br
 		      = link_to 'github source', 'https://github.com/islandpress/greencommons-chatbot-fulfillment-webhook', class: 'form-box__link', target: '_blank'
 	        h4
 	          .div class="col-xs-24 col-xs-offset-0"
@@ -100,8 +122,6 @@
 			  <br>
 			  <iframe width="1000" height="500" src="https://console.dialogflow.com/api-client/demo/embedded/190ed4ed-7d37-4369-b372-3ab3463a22cc"></iframe>
 			  <br>
-			  <a>https://github.com/gtourtellot/greencommons-chatbot-fulfillment-webhook</a>
-
         </div>
       </div>
     </div>

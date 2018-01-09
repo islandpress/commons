@@ -31,6 +31,43 @@ class StaticPagesController < ApplicationController
     @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
   end
 
+  def get_book_hash(title)
+    bk = Resource.find_by_sql('select * from resources where title = '\
+                                           "'%s'" % title)
+    if bk and bk.first
+    	bk = bk.first
+	    bkh = { 'title' => bk.title,
+	    		'id' => bk.id,
+	    		'class' => 'form-box__link' }
+    else
+	    bkh = { 'title' => title,
+  			    'id' => 0,
+	    		'class' => 'form-box__redlink' }
+	end
+	bkh
+  end
+
+  def get_network_hash(name)
+    net = Network.find_by_sql('select * from networks where name = '\
+                                           "'%s'" % name)
+    if net and net.first
+    	net = net.first
+	    neth = { 'name' => net.name,
+	    		 'id' => net.id,
+	    		 'class' => 'form-box__link' }
+    else
+	    neth = { 'name' => name,
+  			     'id' => 0,
+	    		 'class' => 'form-box__redlink' }
+	end
+	neth
+  end
+
+  def demo4
+	@book1 = get_book_hash('An Acceptable Time')
+	@network1 = get_network_hash('BLAHKoss-Price')
+  end
+
   def policy; end
 
   def about; end
