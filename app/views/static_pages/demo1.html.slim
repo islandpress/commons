@@ -5,7 +5,7 @@
         <div class='form-box'>
 		  <h1 id="ecosystem">Green Commons</h1>
 		  .h5
-		    'An online platform for resource sharing.
+		    | An online platform for resource sharing.
 		  .p
 		    <br>
 
@@ -15,8 +15,8 @@
 			  .h5
 			  	'Observations:
 			    <ul>
-				  <li>There are thousands of organizations engaged in some way.</li>
-				  <li>There are countless more websites, people, and resources.</li>
+				  <li>There are thousands of pertinent organizations.</li>
+				  <li>Countless more websites, people, and resources exist.</li>
 				  <li>There is high redundancy of effort.</li>
 				  <li>Information is often siloed or difficult to navigate.</li>
 				  <li>Organizations struggle to get content in front of their audiences.</li>
@@ -27,17 +27,20 @@
             .col-xs-12.col-md-4.col-lg-4
 		      = render 'static_pages/hover_orgs'
               .h7
-              	'A sea of environmental organizations
+			    .div class='text-center'
+              	  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A sea of environmental organizations
 
 		  <h1 id="ecosystem">Ecosystem</h1>
 	      .row
             .col-xs-12.col-md-6.col-lg-5
-		      <div><img src="/assets/gc_ecosystem_color_cropped.png"></div>
+		      <div>
+		      = image_tag 'gc_ecosystem_color_cropped.png'
+		      </div>
             .col-xs-12.col-md-6.col-lg-5
 			  .h5
 			  	.p
 				  <br><br>
-				'Value propositions:
+				| Value propositions:
 			    <ul>
 			      <li>Access to high quality resources.</li>
 			      <li>A simpler discovery solution; one site with thousands of sources.</li>
@@ -51,15 +54,18 @@
 		  .p
 		    <br>
 
-		  <h1 id="solution">Solution</h1>
-		    <ul>
-			  <li></li>
-			  <li></li>
-		    </ul>			  	
-			  'There are many different kinds of information; each has value and should be nurtured and shepherded along.
-			  <h2 id="info-flow">Information Flow</h1>
+		  <h1 id="solution">Architecture</h1>
+			  .h5
+			    <ul>
+			      <li>There are many different kinds of information; each has value and should be fully utilized.</li>
+			      <li>Humans and algorithms both play a role in augmenting and relating content.</li>
+			      <li>Convenient, flexible interfaces are key to fostering platform activity and growth.</li>
+			    </ul>
+			  <h3 id="info-flow">Information Flow</h3>
 	          .row
-			    <div><img src="/assets/resource_flow.png"></div>
+			    <div>
+			    = image_tag 'resource_flow.png'
+			    </div>
         </div>
       </div>
     </div>
