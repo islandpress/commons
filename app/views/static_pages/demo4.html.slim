@@ -20,20 +20,15 @@
 			          <b>GC Utilization:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
 					    - net = Network.find_by_sql("select * from networks where name = '%s'" % "Koss-Price!").first
-					    - rec = Resource.find_by_sql("select * from resources where title = '%s'" % "Vile Bodies").first
-					    - lst = List.find_by_sql("select * from lists where name = '%s'" % "incidunt").first
 					    | abcd 
 				        - if net
 					      = link_to net.name, network_path(net.id), class: 'form-box__link'
 					    - else
-					      = link_to 'MISSING', network_path(0), class: 'form-box__link'
+					      = link_to 'something', network_path(0), class: 'form-box__link'
 					    |  and 
 						= link_to @book1['title'], resource_path(@book1['id']), class: @book1['class']
 						= link_to @network1['name'], network_path(@network1['id']), class: @network1['class']
 					    |  and 
-					    = link_to rec.title, resource_path(rec.id), class: 'form-box__link'
-					    |  and 
-					    = link_to lst.name, list_path(lst.id), class: 'form-box__link'
 					    .br
 					    = link_to "water", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
 			      .clearfix

@@ -21,17 +21,6 @@ class StaticPagesController < ApplicationController
     @videos = Resource.videos.order('RANDOM()').first(6)
   end
 
-  def demo2
-    @books = Resource.books.order('RANDOM()').first(6)
-    @specific_book1 = Resource.find_by_sql('select * from resources where title = '\
-                                           "'An Acceptable Time'").first
-    @specific_book2 = Resource.find_by_sql('select * from resources where title = '\
-                                           "'An Instant In The Wind'").first
-    q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' "\
-        "is not null order by metadata->>'publisher' asc;"
-    @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
-  end
-
   def get_book_hash(title)
     bk = Resource.find_by_sql('select * from resources where title = '\
                                            "'%s'" % title)
@@ -62,6 +51,14 @@ class StaticPagesController < ApplicationController
 	    		 'class' => 'form-box__redlink' }
 	end
 	neth
+  end
+
+  def demo2
+	@book1 = get_book_hash('An Acceptable Time')
+    @book2 = get_book_hash('An Instant In The Wind')
+    q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' "\
+        "is not null order by metadata->>'publisher' asc;"
+    @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
   end
 
   def demo4
