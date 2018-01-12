@@ -59,13 +59,14 @@ class ResourcesController < ApplicationController
 
   def resource_params_for_create
     params.require(:resource).
-      permit(:title, :url, :resource_type, :short_content, :privacy, :content_download_link)
+      permit(:title, :url, :resource_type, :short_content, :privacy,
+             :content_download_link, :tag_list)
   end
 
   def resource_params_for_update
     params.require(:resource).
       permit(:title, :resource_type, :short_content, :privacy, :creators,
-             :publisher, :date, :publisher, :rights, :pages, :isbn, :tag_list)
+             :publisher, :date, :rights, :pages, :isbn, :tag_list)
   end
 
   def load_resource_types

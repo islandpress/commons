@@ -13,7 +13,6 @@ module Api
         @resource = Resource.new(resource_params)
         authorize @resource
 
-        @resource.resource_type = :url
         @resource.user = current_user
 
         if @resource.save
@@ -42,7 +41,7 @@ module Api
         params.require(:data).
           require(:attributes).
           permit(:title, :url, :short_content, :privacy, :creators, :publisher,
-                 :date, :rights, :pages, :isbn)
+                 :date, :rights, :pages, :isbn, :resource_type, :tag_list)
       end
     end
   end
