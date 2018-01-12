@@ -6,6 +6,7 @@ module SearchBuilders
       books: 'book',
       courses: 'course',
       datasets: 'dataset',
+	  events: 'event',
       images: 'image',
       posts: 'post',
       profiles: 'profile',

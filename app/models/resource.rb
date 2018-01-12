@@ -11,15 +11,16 @@ class Resource < ApplicationRecord
     book: 2,
     course: 3,
     dataset: 4,
-    image: 5,
-    post: 6,
-    profile: 7,
-    report: 8,
-    slide: 9,
-    software: 10,
-    syllabus: 11,
-    url: 12,
-    video: 13
+    event: 5,
+    image: 6,
+    post: 7,
+    profile: 8,
+    report: 9,
+    slide: 10,
+    software: 11,
+    syllabus: 12,
+    url: 13,
+    video: 14
   }.freeze
 
   METADATA_FIELDS = %w(

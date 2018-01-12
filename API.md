@@ -33,7 +33,7 @@ __Query Parameters__
 
 - `q`: The term to search for.
 - `filters`: Filters to apply to the search. For now, results can only be filtered by class or `resource_type`. Supported Values:
-  - `filters[resource_types]=articles,books,reports,urls,audios,courses,datasets,images,syllabuses,videos,profiles`
+  - `filters[resource_types]=articles,audio,books,courses,datasets,events,images,posts,profiles,reports,slides,software,urls,syllabi,videos`
   - `filters[model_types]=resources,lists,networks`
 - `sort`: Field to sort the results by. Supported Values:
   - `sort=published_at` (Ascending)

@@ -90,6 +90,11 @@
                                                                      count: @counts[Resource::RESOURCE_TYPES[:dataset]],
                                                                      list: @datasets,
                                                                      resource_type: :dataset
+                    .col-xs-12.col-sm-4.col-md-4
+                      = render 'shared/components/resource_details', title: 'Events',
+                                                                     count: @counts[Resource::RESOURCE_TYPES[:event]],
+                                                                     list: @events,
+                                                                     resource_type: :event
           .row
             .col-xs-12.col-md-8.col-md-offset-2
               ol.carousel-indicators.gc-carousel-indicators
