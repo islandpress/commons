@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
     @books = Resource.books.order('RANDOM()').first(6)
     @courses = Resource.courses.order('RANDOM()').first(6)
     @datasets = Resource.datasets.order('RANDOM()').first(6)
+    @events = Resource.events.order('RANDOM()').first(6)
     @images = Resource.images.order('RANDOM()').first(6)
     @posts = Resource.posts.order('RANDOM()').first(6)
     @profiles = Resource.profiles.order('RANDOM()').first(6)
