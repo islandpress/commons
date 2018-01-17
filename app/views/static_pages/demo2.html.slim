@@ -6,6 +6,7 @@
 			<h1 id="content-sources">Content</h1>
 			| sunburst chart here; data hierarchy:
 			|  media_type (network, list, resource), subtype (i.e., resource_type), publisher_type (?new field!), publisher, access, num_resources
+			<h2 id="special_offerings">Special Offerings</h1>
 			<h2 id="subscriptions">Subscriptions</h1>
 			<h2 id="repository">Respository</h1>
 			<h1 id="publishers">Publishers</h1>
@@ -17,10 +18,9 @@
 				.b
 				= render 'shared/components/demo-publishers-dropdown', publisher_arr: @publisher_arr
 				.b
-				= link_to @specific_book1.title, resource_path(@specific_book1.id)
+				= link_to @book1['title'], resource_path(@book1['id']), class: @book1['class']
 				.b
-			    - rec = Resource.find_by_sql("select * from resources where title = '%s'" % "Vile Bodies").first
-				= link_to rec.title, resource_path(rec.id)
+				= link_to @book2['title'], resource_path(@book2['id']), class: @book2['class']
 				.b
 				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
 			<p></p>
