@@ -1,7 +1,8 @@
 # config
-users_count = 20
-resources_count = 400
-networks_count = 10
+users_count = 0
+resources_count = 0
+networks_count = 0
+list_count = 0
 
 p 'Creating admin user with email \'admin@greencommons.org\' and password \'thecommons\'...'
 admin = FactoryGirl.create(:user, email: 'admin@greencommons.org',
@@ -19,9 +20,9 @@ p "Creating #{resources_count} resources..."
   FactoryGirl.create(:resource, user: User.all.sample)
 end
 
-p 'Creating 2 lists with 10-50 resources for each user...'
+p "Creating #{list_count} lists with 10-50 resources for each user..."
 User.all.each do |user|
-  FactoryGirl.create_list(:list, 2, owner: user,
+  FactoryGirl.create_list(:list, list_count, owner: user,
                                     resources: Resource.order('RANDOM()').limit(rand(10..50)))
 end
 
