@@ -62,7 +62,7 @@
                   .col-xs-12
                     p.page-details__description
                       - if @resource.short_content
-                        = @resource.short_content
+                        = @resource.short_content.truncate(400)
                       - else
                         = @resource.long_content&.truncate(400)
                   .clearfix
@@ -71,7 +71,7 @@
                 .col-xs-12.col-md-6
                   = react_component 'Tags', { authenticity_token: form_authenticity_token,
                                               submit_url: resource_tags_path(@resource),
-                                              tags: @resource.cached_tags,
+                                              tags: @resource.cached_tags&.first(20),
                                               can_create: true }, { prerender: true }
                 .col-xs-12.col-md-6
                   .resource-actions
