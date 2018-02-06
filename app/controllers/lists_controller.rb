@@ -40,9 +40,10 @@ class ListsController < ApplicationController
       items.each do |item|
         if item.send('item_type') == 'Resource'
           resource = Resource.find(item.send('item_id'))
+          content = resource.short_content.is_a?(String) ? resource.short_content : resource.long_content.first(400)
           csv << list_attributes.map { |attr| item.send(attr) } +
                  [resource.name, resource.tag_list,
-                  resource.short_content, resource.url]
+                  content, resource.url]
         elsif item.send('item_type') == 'Network'
           network = Network.find(item.send('item_id'))
           csv << list_attributes.map { |attr| item.send(attr) } +
