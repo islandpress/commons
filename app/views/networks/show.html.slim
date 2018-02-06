@@ -97,20 +97,6 @@
                     .col-xs-12
                       .page-details__section-title.page-details__row
                         h6.pull-left
-                          | What's new
-                        .pull-right
-                          = link_to '#', class: 'btn btn-white-transparent' do
-                            | See all
-                            i.fa.fa-long-arrow-right.glyphicon--left
-                        .clearfix
-                      - @resources.each do |resource|
-                        .row
-                          .col-lg-12
-                            = render 'shared/summary_cards/main', resource: resource
-                  .row.page-details__row--double
-                    .col-xs-12
-                      .page-details__section-title.page-details__row
-                        h6.pull-left
                           | Lists
                         .pull-right
                           = link_to new_list_path(list: {owner: "Network:#{@network.id}"}), class: 'btn btn-white-transparent resource-actions__button--right' do
