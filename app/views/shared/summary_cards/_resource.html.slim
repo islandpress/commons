@@ -33,7 +33,7 @@
           = resource.long_content&.truncate(400)
 
     - unless minimalist
-      = render 'shared/components/tags_list', tags: resource.cached_tags.first(20)
+      = render 'shared/components/tags_list', tags: resource.cached_tags
       .summary-card__row.summary-card__row--last
         .summary-card__more.summary-card__more--mr
           = react_component 'AddToListButton', { name: resource.name,
