@@ -4,7 +4,7 @@
         "vendor": "org.islandpress",
         "name": "ResourceArraySchema",
         "format": "jsonschema",
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "definitions": {
         "schema_version_type": {
@@ -190,6 +190,53 @@
                     "type": "string",
                     "title": "ISBN"
                 },
+                "language": {
+                    "enum": ["af", "sq", "am", "ar", "bi", "hy", "az", "eu",
+							 "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN",
+							 "zh-TW", "co", "hr", "cs", "da", "nl", "en",
+							 "eo", "et", "fi", "fj", "fr", "fy", "gl", "ka",
+							 "de", "el", "gu", "ht", "ha", "haw", "he", "iw",
+							 "hi", "hmn", "hu", "is", "ig", "id", "ga",
+							 "it", "ja", "jw", "kn", "kk", "km", "ko",
+							 "ku", "ky", "lo", "la", "lv", "lt", "lb",
+							 "mk", "mg", "mh", "ms", "ml", "mt", "mi", "mr",
+							 "mn", "my", "ne", "no", "ny", "ps", "fa",
+							 "pl", "pt", "pa", "ro", "ru", "sm", "gd",
+							 "sr", "st", "sn", "sd", "si", "sk", "sl",
+							 "so", "es", "su", "sw", "sv", "tl", "tg",
+							 "ta", "te", "th", "to", "tr", "ty", 
+							 "uk", "ur", "uz", "vi", "cy", "xh", 
+							 "yi", "yo", "zh", "zu", null],
+                    "title": "Language",
+		            "description": "ISO-639-1 Codes"
+                },                
+                "address": {
+                    "type": "string",
+                    "title": "Address"
+                },                
+                "source": {
+                    "type": "string",
+                    "title": "Source"
+                },                
+                "source_detail": {
+                    "type": "string",
+                    "title": "Source detail"
+                },                
+                "access": {
+                    "enum": ["free and open", "separate account required",
+                    	     "individual purchase", "multiple purchase options",
+                    	     null],
+                    "title": "Access"
+                },                
+                "input_type": {
+                    "enum": ["direct", "api", "ui",
+                    		 "scrape", "feed", "oai-pmh"],
+                    "title": "Input Type"
+                },                
+                "dont_annotate": {
+					"type": "boolean",
+					"title": "Don't Annotate"
+                },
                 "schema": { 
                     "$ref" : "#/definitions/schema_version_type",
                     "title": "Schema Version"
@@ -201,9 +248,9 @@
             "type": "object",
             "properties": {
                 "resource_type": {
-                    "enum": ["article", "audio", "book", "course", "dataset", 
-                    		 "image", "report", "syllabus", "video", "profile",
-                    		 "slide", "post", "software"],
+                    "enum": ["article", "audio", "book", "course", "dataset",
+                    		 "event", "image", "post", "profile", "report",
+                    		 "slide", "software", "syllabus", "url", "video"],
                     "title": "Resource Type"
                 },
                 "user_id": {
@@ -258,5 +305,5 @@
     "title": "Resource Array Doc",
     "items": { "$ref": "#/definitions/record_type" },
     "minItems": 1,
-    "description": "Green Commons Resource Array Document"
+    "description": "Resource Array Document"
  }
