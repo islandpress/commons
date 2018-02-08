@@ -59,6 +59,12 @@ class StaticPagesController < ApplicationController
     q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' "\
         "is not null order by metadata->>'publisher' asc;"
     @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
+    q = "select distinct metadata->>'source' from resources where metadata->>'source' "\
+        "is not null order by metadata->>'source' asc;"
+    @source_arr = ActiveRecord::Base.connection.execute(q).values.flatten
+    q = "select distinct metadata->>'language' from resources where metadata->>'language' "\
+        "is not null order by metadata->>'language' asc;"
+    @language_arr = ActiveRecord::Base.connection.execute(q).values.flatten
   end
 
   def demo4
