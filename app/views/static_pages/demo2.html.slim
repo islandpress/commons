@@ -9,14 +9,15 @@
 			<h2 id="special_offerings">Special Offerings</h1>
 			<h2 id="subscriptions">Subscriptions</h1>
 			<h2 id="repository">Respository</h1>
-			<h1 id="publishers">Publishers</h1>
+			<h1 id="sources">Sources</h1>
 			<h2 id="collaborations">Collaborations</h1>
 			<p>What content is in the platform.</p>
 			.container-fluid
 		      .row
 				.b
+				= render 'shared/components/demo-sources-dropdown', source_arr: @source_arr
 				.b
-				= render 'shared/components/demo-publishers-dropdown', publisher_arr: @publisher_arr
+				= render 'shared/components/demo-languages-dropdown', language_arr: @language_arr
 				.b
 				= link_to @book1['title'], resource_path(@book1['id']), class: @book1['class']
 				.b

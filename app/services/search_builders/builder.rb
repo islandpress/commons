@@ -25,6 +25,16 @@ module SearchBuilders
       self
     end
 
+    def filter_by_source
+      @es_params = SearchBuilders::SourceFilter.new(@filters, @es_params).build
+      self
+    end
+
+    def filter_by_language
+      @es_params = SearchBuilders::LanguageFilter.new(@filters, @es_params).build
+      self
+    end
+
     def filter_by_date
       @es_params = SearchBuilders::DateFilter.new(@filters, @es_params).build
       self

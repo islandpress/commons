@@ -1,0 +1,10 @@
+.demo-languages-dropdown
+  .row          
+    .col-xs-4.col-md-4.col-lg-4
+	  - rtypes = Hash[Resource::RESOURCE_TYPES.keys.map {|x| ["#{x}".pluralize, 'on']}]
+      button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+  	    = "Languages"
+	    span.caret
+      ul.dropdown-menu
+        - language_arr.each do |p|
+          li= link_to(p, search_path(query: '', filters: { language: p, model_types: {resources: 'on'}, resource_types: rtypes, sort: 'score' }), target: :_blank)
