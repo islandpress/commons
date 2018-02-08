@@ -32,6 +32,7 @@ class Resource < ApplicationRecord
     rights
     pages
     isbn
+    dont_annotate
   ).freeze
 
   has_paper_trail
