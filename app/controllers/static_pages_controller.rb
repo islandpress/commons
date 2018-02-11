@@ -54,17 +54,15 @@ class StaticPagesController < ApplicationController
   end
 
   def demo2
-	@book1 = get_book_hash('An Acceptable Time')
-    @book2 = get_book_hash('An Instant In The Wind')
-    q = "select distinct metadata->>'publisher' from resources where metadata->>'publisher' "\
-        "is not null order by metadata->>'publisher' asc;"
-    @publisher_arr = ActiveRecord::Base.connection.execute(q).values.flatten
-    q = "select distinct metadata->>'source' from resources where metadata->>'source' "\
-        "is not null order by metadata->>'source' asc;"
-    @source_arr = ActiveRecord::Base.connection.execute(q).values.flatten
     q = "select distinct metadata->>'language' from resources where metadata->>'language' "\
         "is not null order by metadata->>'language' asc;"
     @language_arr = ActiveRecord::Base.connection.execute(q).values.flatten
+
+	q = "select source, resource_type, access, input_type, count from resource_summary;"
+    tmp = ActiveRecord::Base.connection.execute(q).values
+
+	rev_resource_map = Hash[Resource::RESOURCE_TYPES.map { |k, v| [v, k.to_s()] }]
+	@data_counts = tmp.map {|item| [item[0], rev_resource_map[item[1]].pluralize, item[2], item[3], item[4]] }
   end
 
   def demo4

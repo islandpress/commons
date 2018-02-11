@@ -3,28 +3,47 @@
     <div class='row'>
       <div class='col-xs-12'>
         <div class='form-box'>
-			<h1 id="content-sources">Content</h1>
-			| sunburst chart here; data hierarchy:
-			|  media_type (network, list, resource), subtype (i.e., resource_type), publisher_type (?new field!), publisher, access, num_resources
-			<h2 id="special_offerings">Special Offerings</h1>
-			<h2 id="subscriptions">Subscriptions</h1>
-			<h2 id="repository">Respository</h1>
 			<h1 id="sources">Sources</h1>
-			<h2 id="collaborations">Collaborations</h1>
-			<p>What content is in the platform.</p>
-			.container-fluid
-		      .row
-				.b
-				= render 'shared/components/demo-sources-dropdown', source_arr: @source_arr
-				.b
-				= render 'shared/components/demo-languages-dropdown', language_arr: @language_arr
-				.b
-				= link_to @book1['title'], resource_path(@book1['id']), class: @book1['class']
-				.b
-				= link_to @book2['title'], resource_path(@book2['id']), class: @book2['class']
-				.b
-				= link_to "http://water.org", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
-			<p></p>
+		 	  | Click to explore the Green Commons content sources.
+		 	  .b
+			  <button type="button" data-toggle="collapse" data-target="#content_table">Content Sources Table</button>
+			  <div id="content_table" class="collapse">
+		 	    = render 'shared/components/demo-data-counts', data_counts: @data_counts
+			  </div>		 	  
+			<h2 id="special_offerings">Special Offerings</h2>
+			  | These resources highlight types of collaborations important to Green Commons:
+			  ul
+			    li = link_to 'Island Press', '/search?filters%5Bmodel_types%5D%5Bresources%5D=on&filters%5Bresource_types%5D%5Bbooks%5D=on&filters%5Bsort%5D=score&filters%5Bsource%5D=Island+Press', class: 'form-box__link', target: '_blank'
+			    li = link_to 'MIT Press', '/search?filters%5Bmodel_types%5D%5Bresources%5D=on&filters%5Bresource_types%5D%5Bbooks%5D=on&filters%5Bsort%5D=score&filters%5Bsource%5D=MIT+Press', class: 'form-box__link', target: '_blank'
+			    li = link_to 'Open Syllabus Project', '/search?filters%5Bmodel_types%5D%5Bresources%5D=on&filters%5Bresource_types%5D%5Bsyllabi%5D=on&filters%5Bsort%5D=score&filters%5Bsource%5D=The+Open+Syllabus+Project', class: 'form-box__link', target: '_blank'
+			    li = link_to 'Puerto Rico Climate Change Council (PRCCC)', '/search?filters%5Bmodel_types%5D%5Bresources%5D=on&filters%5Bresource_types%5D%5Breports%5D=on&filters%5Bsort%5D=score&filters%5Bsource%5D=PRCCC+%28Puerto+Rico+Climate+Change+Council%29', class: 'form-box__link', target: '_blank'
+			<h2 id="feeds">Publishing</h2>
+			  | The Green Commons will be a single destination for discovering and following publishers.
+			  .b
+			  | Publishers are not only traditional presses, but also other organizations, large and small.
+			  .b
+			  | Users and publishers alike will benefit from the platform, with better knowledge flow and reach.
+			<h2 id="subscriptions">Subscriptions</h2>
+			  | The Green Commons contains a number of high quality resources, and aspires to offer many more.
+			  .b
+			  | For high quality content that cannot be made available for free, affordable access could be provided via subscriptions.
+			  .b
+			  | For example, many 
+			  = link_to 'Island Press books', '/search?filters%5Bmodel_types%5D%5Bresources%5D=on&filters%5Bresource_types%5D%5Bbooks%5D=on&filters%5Bsort%5D=score&filters%5Bsource%5D=Island+Press', class: 'form-box__link', target: '_blank'
+			  |  can already be viewed in entirety 
+			  = link_to 'online', 'https://ebooks.islandpress.org/', class: 'form-box__link', target: '_blank'
+			  |  via such a model.
+			<h2 id="repository">Respository</h2>
+			| The Green Commons currently has more than 350,000 
+			= link_to 'datasets', '/search?filters[model_types][resources]=on&filters[resource_types][datasets]=on', class: 'form-box__link', target: '_blank'
+			| , and is envisioned as a key data refuge partner for environmental and climate data. 
+			<h2 id="diversity">Diversity</h2>
+			  | The Green Commons seeks to promote knowledge sharing with everyone, including underrepresented voices.
+			  .b
+			  | To that end, we content in multiple languages, and strive to content in every language discoverable and useful.
+			  .b
+			  | View a list of our resources languages:
+			  = render 'shared/components/demo-languages-dropdown', language_arr: @language_arr
         </div>
       </div>
     </div>
