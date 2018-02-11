@@ -1,0 +1,32 @@
+.demo-data-counts
+  .row          
+    .col-xs-4.col-md-4.col-lg-4
+	  <table class="table table-bordered table-hover table-responsive">
+	    <thead>
+	      <tr>
+		    <th scope="col"><div style="width: 400px">Source</div></th>
+		    <th scope="col"><div style="width: 100px">Resource Type</div></th>
+		    <th scope="col"><div style="width: 200px">Access</div></th>
+		    <th scope="col"><div style="width: 100px">Input Type</div></th>
+		    <th scope="col"><div style="width: 100px">Resource Count</div></th>
+        </tr>
+      - data_counts.each do |d|
+          <tr>
+	        <th scope="row">
+	        = link_to(d[0], search_path(query: '', filters: { source: d[0], model_types: {resources: 'on'}, resource_types: {d[1] => "on"}, sort: 'score' }), target: :_blank)
+	        </th>
+		    <td title="Resource Type">
+		    = d[1]
+		    </td>
+	        <td title="Access">
+	        = d[2]
+	        </td>
+		    <td title="Input Type">
+		    = d[3]
+		    </td>
+		    <td title="Resource Count">
+		    = d[4]
+			</td>
+		  </tr>
+	  </tbody>
+  	  </table>
