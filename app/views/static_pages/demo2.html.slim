@@ -20,7 +20,13 @@
 			<h2 id="feeds">Publishing</h2>
 			  | The Green Commons will be a single destination for discovering and following publishers.
 			  .b
-			  | Publishers are not only traditional presses, but also other organizations, large and small.
+			  | Publishers are not only traditional 
+			  = link_to 'presses', list_path(@press_list['id']), class: @press_list['class']
+			  |  and 
+			  = link_to 'journals', list_path(@journal_list['id']), class: @journal_list['class']
+			  |  , but also 
+			  = link_to 'other organizations', list_path(@other_list['id']), class: @other_list['class']
+			  | , large and small.
 			  .b
 			  | Users and publishers alike will benefit from the platform, with better knowledge flow and reach.
 			<h2 id="subscriptions">Subscriptions</h2>
