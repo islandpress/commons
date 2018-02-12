@@ -53,9 +53,29 @@ class StaticPagesController < ApplicationController
 	neth
   end
 
+  def get_list_hash(name)
+    lst = List.find_by_sql('select * from lists where name = '\
+                                           "'%s'" % name)
+    if lst and lst.first
+    	lst = lst.first
+	    lst = { 'name' => lst.name,
+	    		'id' => lst.id,
+	    		'class' => 'form-box__link' }
+    else
+	    lst = { 'name' => name,
+  			    'id' => 0,
+	    		'class' => 'form-box__redlink' }
+	end
+	lst
+  end
+
   def demo2
-    q = "select distinct metadata->>'language' from resources where metadata->>'language' "\
-        "is not null order by metadata->>'language' asc;"
+	@press_list = get_list_hash('Presses - Sample Resources')
+	@journal_list = get_list_hash('Journals - Sample Resources')
+	@other_list = get_list_hash('Misc. Large and Small Publishers - Sample Resources')
+
+    q = "select distinct metadata->>'language_name' from resources where metadata->>'language_name' "\
+        "is not null order by metadata->>'language_name' asc;"
     @language_arr = ActiveRecord::Base.connection.execute(q).values.flatten
 
 	q = "select source, resource_type, access, input_type, count from resource_summary;"
