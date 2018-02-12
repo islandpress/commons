@@ -4,16 +4,13 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/privacypolicy', to: 'static_pages#policy', as: :policy
   get '/about', to: 'static_pages#about', as: :about
-  get '/demo1', to: 'static_pages#demo1', as: :demo1
-  get '/demo2', to: 'static_pages#demo2', as: :demo2
-  get '/demo3', to: 'static_pages#demo3', as: :demo3
-  get '/demo4', to: 'static_pages#demo4', as: :demo4
-  get '/demo5', to: 'static_pages#demo5', as: :demo5
-  get '/demo6', to: 'static_pages#demo6', as: :demo6
-  get '/demo7', to: 'static_pages#demo7', as: :demo7
-  get '/demo8', to: 'static_pages#demo8', as: :demo8
-  get '/demo9', to: 'static_pages#demo9', as: :demo9
-  get '/demo10', to: 'static_pages#demo10', as: :demo10
+  get '/walkthru_overview', to: 'static_pages#walkthru_overview', as: :walkthru_overview
+  get '/walkthru_content', to: 'static_pages#walkthru_content', as: :walkthru_content
+  get '/walkthru_sampleusers', to: 'static_pages#walkthru_sampleusers', as: :walkthru_sampleusers
+  get '/walkthru_comparisons', to: 'static_pages#walkthru_comparisons', as: :walkthru_comparisons
+  get '/walkthru_extensions', to: 'static_pages#walkthru_extensions', as: :walkthru_extensions
+  get '/walkthru_featuretour', to: 'static_pages#walkthru_featuretour', as: :walkthru_featuretour
+  get '/walkthru_nextsteps', to: 'static_pages#walkthru_nextsteps', as: :walkthru_nextsteps
 
   # External API routes
   namespace :api do

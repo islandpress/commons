@@ -190,6 +190,11 @@
                     "type": "string",
                     "title": "ISBN"
                 },
+                "language_name": {
+                    "type": "string",
+                    "title": "Language Name",
+		            "description": "ISO-639-1 ISO Language Name"
+                },
                 "language": {
                     "enum": ["af", "sq", "am", "ar", "bi", "hy", "az", "eu",
 							 "be", "bn", "bs", "bg", "ca", "ceb", "zh-CN",

@@ -69,7 +69,7 @@ class StaticPagesController < ApplicationController
 	lst
   end
 
-  def demo2
+  def walkthru_content
 	@press_list = get_list_hash('Presses - Sample Resources')
 	@journal_list = get_list_hash('Journals - Sample Resources')
 	@other_list = get_list_hash('Misc. Large and Small Publishers - Sample Resources')
@@ -85,7 +85,7 @@ class StaticPagesController < ApplicationController
 	@data_counts = tmp.map {|item| [item[0], rev_resource_map[item[1]].pluralize, item[2], item[3], item[4]] }
   end
 
-  def demo4
+  def walkthru_sampleusers
 	@book1 = get_book_hash('An Acceptable Time')
 	@network1 = get_network_hash('BLAHKoss-Price')
   end
