@@ -4,7 +4,7 @@
         "vendor": "org.islandpress",
         "name": "NetworkArraySchema",
         "format": "jsonschema",
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "definitions": {
         "schema_version_type": {
@@ -49,7 +49,7 @@
         "metadata_type": {
             "type": "object",
             "properties": {
-                "schema": {
+                "schema": { 
                     "$ref" : "#/definitions/schema_version_type",
                     "title": "Schema Version"
                 }
