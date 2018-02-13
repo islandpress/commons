@@ -74,9 +74,10 @@ class StaticPagesController < ApplicationController
 	@journal_list = get_list_hash('Journals - Sample Resources')
 	@other_list = get_list_hash('Misc. Large and Small Publishers - Sample Resources')
 
-    q = "select distinct metadata->>'language_name' from resources where metadata->>'language_name' "\
-        "is not null order by metadata->>'language_name' asc;"
-    @language_arr = ActiveRecord::Base.connection.execute(q).values.flatten
+    q = "select metadata->>'language' AS language, metadata->>'language_name' "\
+        "as language_name from resources where metadata->>'language_name' "\
+        "is not null   GROUP BY metadata->>'language', metadata->>'language_name';"
+    @language_arr2 = ActiveRecord::Base.connection.execute(q).values
 
 	q = "select source, resource_type, access, input_type, count from resource_summary;"
     tmp = ActiveRecord::Base.connection.execute(q).values
