@@ -77,6 +77,15 @@ ActiveRecord::Schema.define(version: 20170913184143) do
     t.index ["user_id"], name: "index_networks_users_on_user_id", using: :btree
   end
 
+  create_table "resource_summary", id: false, force: :cascade do |t|
+    t.serial  "id",                        null: false
+    t.string  "source",        limit: 255
+    t.integer "resource_type",             null: false
+    t.string  "access",        limit: 255
+    t.string  "input_type",    limit: 255
+    t.integer "count",                     null: false
+  end
+
   create_table "resources", force: :cascade do |t|
     t.string   "title",                          null: false
     t.integer  "resource_type",     default: 0,  null: false
