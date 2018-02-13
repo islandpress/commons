@@ -6,5 +6,5 @@
   	    = "Languages"
 	    span.caret
       ul.dropdown-menu
-        - language_arr.each do |p|
-          li= link_to(p, search_path(query: '', filters: { language: p, model_types: {resources: 'on'}, resource_types: rtypes, sort: 'score' }), target: :_blank)
+        - language_arr.each do |el|
+          li= link_to(el[1], search_path(query: '', filters: { language: el[0], model_types: {resources: 'on'}, resource_types: rtypes, sort: 'score' }), target: :_blank)
