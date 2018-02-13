@@ -95,6 +95,11 @@ Similarly, this can be done for all indices ("resource", "network", "user"):
 bundle exec rake elasticsearch:reset:all_indices
 ```
 
+Note that some tuning of settings may be necessary. For example, if there are lots of resources, then increase the number of results that can be loaded (up from default of 10k; replace MY_BONSAI_URL with relevant ES url).
+
+`curl -XPUT "MY_BONSAI_URL/resources-production/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'`
+
+
 Testing
 -------
 
