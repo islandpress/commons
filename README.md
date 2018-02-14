@@ -99,6 +99,8 @@ Note that some tuning of settings may be necessary. For example, if there are lo
 
 `curl -XPUT "MY_BONSAI_URL/resources-production/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'`
 
+`curl -XPUT "MY_BONSAI_URL/lists-production/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'`
+
 
 Testing
 -------

@@ -5,193 +5,79 @@
         <div class='form-box'>
 			<h1 id="sample-users">Sample Users</h1>
 			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face5.jpg', class: 'summary-card__image'
 			      .summary-card__title
 			        h3
-			          'Hydrologist
+			          | Robert Shepard
+			        h4
+			          | Chief Scientist, Water at the Pacific Climate Institute
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>Job Description:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
+		          		| Robert Shepard is a global leader in water science and conservation. In his work as Chief Scientist for the Pacific Climate Institute’s Water program , he promotes sustainable water use and management with governments, corporations and local communities. Shepard has consulted on more than 120 water projects worldwide and he serves as a water advisor to some of the world’s largest corporations, investment banks and the United Nations. He has testified before the U.S. Congress on multiple occasions. He also teaches a course on water sustainability at the University of California, Riverside.
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>GC Utilization:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
 					    - net = Network.find_by_sql("select * from networks where name = '%s'" % "Koss-Price!").first
-					    | abcd 
-				        - if net
-					      = link_to net.name, network_path(net.id), class: 'form-box__link'
-					    - else
-					      = link_to 'something', network_path(0), class: 'form-box__link'
-					    |  and 
-						= link_to @book1['title'], resource_path(@book1['id']), class: @book1['class']
-						= link_to @network1['name'], network_path(@network1['id']), class: @network1['class']
-					    |  and 
-					    .br
-					    = link_to "water", search_path(query: "water"), class: 'tags-list__tag tags-list__tag--black'
+					    | Robert has developed numerous scientific tools and methods to support river protection and restoration efforts, including the Indicators of Hydrologic Alteration software that is being used by water managers and scientists worldwide. He has uploaded them all to Green Commons and has formed a working group network that is developing ideas for additional software tools that are needed. He also maintains a list of essential water resources that he updates weekly for its 1670 followers.
 			      .clearfix
 
 			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face6.jpg', class: 'summary-card__image'
 			      .summary-card__title
 			        h3
-			          'Attorney for Land Conservation
+			          | Paula Dickenson
+			        h4
+			          | Senior Attorney, Florida Environmental Law Society,  Indoor Environments and Green Buildings Research Program
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>Job Description:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
+		          		| Paula Dickenson’s work focuses on governmental programs and policies that address the health and environmental impacts of buildings. She has done extensive research and writing on state and local policy approaches to improving indoor air quality in schools, child care facilities, and homes. She has also analyzed the role of government policies and programs in advancing green design and construction, particularly in the public school sector. With FELS since 1992, Dickenson was previously a staff attorney at the Environmental Law Institute.
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>GC Utilization:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
+		          		| Paula uses the Green Commons to research and keep up to date on general information on green building. She also provides information to support the development and implementation of sound policies to address key health and environmental issues in the design, construction, operation, and maintenance of schools, homes, and other buildings. She frequently posts opinion papers in draft form to her Green Building Working Group network and she maintains a list of recent court decisions that she annotates with others in the group.
 			      .clearfix
 
 			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face8.jpg', class: 'summary-card__image'
 			      .summary-card__title
 			        h3
-			          'Attmospheric Scientist
+			          | Eric Rothenberg
+			        h4
+			          | Executive Director of the Center for Resilience, University of Arizona
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>Job Description:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
+		          		| Dr. Rothenberg is an internationally recognized authority on enterprise sustainability and resilience, with over 25 years of research and consulting experience for multi-national companies, government agencies, and industry consortia such as the World Business Council for Sustainable Development. He joined the University of Arizona in 2005 as co-founder and Executive Director of the Center for Resilience. From 2015 to 2018 he served as Executive Director of the Sustainable and Resilient Economy program, part of the University of Arizona’s interdisciplinary Discovery Themes initiative. Dr. Rothenberg began his career at DuPont Corporation, and later served as Director of Decision and Risk Management at Arthur D. Little, Inc. and Vice President for Life Cycle Management at Battelle.
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>GC Utilization:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
+		          		| Dr. Rothenberg posts the written text and video of his numerous talks on Green Commons. He is the member of several resilience networks on the Commons, and he ensures that all research papers and reports from the Center for Resilience are posted on the Commons.
 			      .clearfix
 
 			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face10.jpg', class: 'summary-card__image'
 			      .summary-card__title
 			        h3
-			          'Environmental Journalist
+			          | Lisa J. Campbell
+			        h4
+			          | Regional Science Officer, National Centers for Environmental Information, Honolulu, Hawaii
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>Job Description:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
+		          		| As the Regional Science Officer and NCEI’s Hawaii Liaison, Lisa helps others access the most significant archives of environmental information on Earth, including NOAA data, products, and regional weather information. She also reviews datasets, inspecting for integrity and completeness of the data, before the data become a part of the official NCEI archives.  
+		          		<br><br>
+		          		| She promotes public understanding of climate science and climate-related events through videos, stories, images, and data visualizations; she makes common data products and services easy to access and use; and she provides tools and resources that help people make informed decisions about climate risks, vulnerability, and resilience. Starting in the 2000s, she began dedicating time to producing the Collaborative Surf Forecast for Oahu in partnership with the NOAA National Weather Service. The surf forecast has a wide audience, and Lisa works to improve techniques to improve its accuracy.
 			        h5
 			          .div class="col-xs-24 col-xs-offset-0"
 			          <b>GC Utilization:</b>
 			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
+		          		| Lisa uses the Commons as a key distribution tool for most of her work along with postings on the Center’s website. She appreciates how others can quickly make connections between her work and other’s work on related topics. As she completes her biannual global tide gauge data updates for the Joint Archive for Sea Level, which are requested from agencies around the globe, she plans to include them in the Commons as well. She feels that, with the vast interest in global sea level rise, the exposure the Commons offers allows others to find this critical piece of the climate change pie.
 			      .clearfix
-
-			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face11.jpg', class: 'summary-card__image'
-			      .summary-card__title
-			        h3
-			          'Urban Planner
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>Job Description:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>GC Utilization:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
-			      .clearfix
-
-			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face12.jpg', class: 'summary-card__image'
-			      .summary-card__title
-			        h3
-			          'Corporate Sustainability Specialist
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>Job Description:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>GC Utilization:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
-			      .clearfix
-
-			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face13.jpg', class: 'summary-card__image'
-			      .summary-card__title
-			        h3
-			          'City Council Member
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>Job Description:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>GC Utilization:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
-			      .clearfix
-
-			    .summary-card__row
-			      div class="entity-icon"
-			        = image_tag 'sample_users/face14.jpg', class: 'summary-card__image'
-			      .summary-card__title
-			        h3
-			          'Flodplain Manager
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>Job Description:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia.
-			        h5
-			          .div class="col-xs-24 col-xs-offset-0"
-			          <b>GC Utilization:</b>
-			          .div class="col-xs-24 col-xs-offset-1"
-		          		'Discovere the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that [he/she/it] pursue", subjunctive), rarely used in classical literature.
-			      .clearfix
-
-		<h1 id="impressions">Impressions</h1>
-	    h6
-       	  i
-	        | "I was able to search across everything from municipal reports to datasets to local events to find all the information I need...and all the people I need to talk with about it to understand it."
-	      <br><br>
-	      i
-		    | "Connections! GC connects it all -- research, ideas, people, groups. Getting connected is the first step towards getting things done."
-	      <br><br>
-		  i
-		    | "GC understands that it’s not just about information. It’s about connecting information of all different sorts, from all different places...and then connecting people who care about that information."
-	      <br><br>
-		  i
-			| "GC understands what no other site I’ve found does: Information by itself is just information. It takes people working together to make sense of it and to make it actionable."
-	      <br><br>
-	      i
-		    | "It’s broad in scope, covering any and all environmental topics, not just one of, say, resilience, conservation, energy, design, business, or justice like most other green sites."
-	      <br><br>
-	      i
-		    | "It’s easy to get involved and take action.  Joining a group is a great way to become a part of an existing community, and action-oriented networks provide a goal-focussed structure that facilitates participation and provides a sense of mission and accountability.  I’ve joined groups on other environmental sites and never got much out of it besides a few newsletters in my inbox."
-	      <br><br>
-	      i
-		    | "In the past I've relied on a search engine to find relevant resources, but I never know whether they're really what I'm looking for.  On GC the tags, annotations and discussions save me a lot of time honing in on what I’m looking for; I haven’t had that experience anywhere else."
-	      <br><br>
-	      i
-	        | "GC has lots of resources, includings ones I could find freely or through my university. However, I go to GC because it also has resources uploaded by community members -- resources I can’t find anywhere else."
-	      <br><br>
-	      i
-	    	| "Whenever I want some solid advice for taking action or finding a resource, I always check out the lists on GC.  There’s no search engine that can compile for me David Orr’s favorite books.  Lists are a key social feature for GC, something I haven’t seen used as effectively elsewhere."
-	      <br><br>
-	      i
-			| "GC's open API drives a lot of activity.  Organizations know that by pushing content to GC they’ll be reaching more people and serving their mission better than just keeping it on their own site."
-
-        </div>
       </div>
     </div>
   </div>
