@@ -3,6 +3,10 @@
     <div class='row'>
 	  <div class="col-12 col-sm-12 col-lg-12">
         <div class='form-box'>
+          <h1>The API Advantage</h1>
+            | The Green Commons has a web 
+            = link_to 'API', 'https://github.com/greencommons/commons/blob/master/API.md', class: 'form-box__link', target: '_blank'
+            |  that enables developers to create new means of accessing and delivering content and exposing social features. As such, the Green Commons is a platform, not just a website. Below are example third-party applications created using the Green Commons API.
           <h1>Browser Extensions</h1>
             h3
               | Installation
@@ -17,6 +21,8 @@
 	          .div class="col-xs-24 col-xs-offset-0"
 	            h4
 	              | About
+			.div class="col-xs-24 col-xs-offset-1"
+			  | Effortlessly add resources to lists in the Green Commons as you use navigate the internet.
 			.div class="col-xs-24 col-xs-offset-1"
 		      = link_to 'github source', 'https://github.com/islandpress/gclister_extension', class: 'form-box__link', target: '_blank'
 	        h4
@@ -37,7 +43,7 @@
 	            h4
 	              | About
 			.div class="col-xs-24 col-xs-offset-1"
-			  | When browsing books in Amazon and Goodreads, automatically see information about availability in the Green Commons.
+			  | Automatically see information about a book's availability in the Green Commons when browsing Amazon or Goodreads.
 			  .br
 		      = link_to 'github source', 'https://github.com/islandpress/booksingc_extension', class: 'form-box__link', target: '_blank'
 	        h4
@@ -64,7 +70,7 @@
 	          .div class="col-xs-24 col-xs-offset-0"
 	              | About
 			.div class="col-xs-24 col-xs-offset-1"
-          	  | Surreptitious discovery among Green Commons resources. 
+          	  | This app allows you to explore Green Common's collection of resources as serendipitiously as you like.
           	  .br
 		      = link_to 'github source', 'https://github.com/islandpress/', class: 'form-box__link', target: '_blank'
 	        h4
@@ -85,9 +91,9 @@
 	            h4
 	              | About
 			.div class="col-xs-24 col-xs-offset-1"
-			  | Geographical visualization of US-based environmental organizations (from GC) and climate change bills (from 
+			  | View geographical data about climate bills (from 
 			  = link_to 'Open States', 'https://openstates.org/', class: 'form-box__link', target: '_blank'
-			  | ).  Interestingly, this example demonstrates using GC resource metadata as a dataset.
+			  | ) and US-based environmental organizations (from GC).  Interestingly, this example demonstrates using Green Commons resource metadata as a dataset.
 			  .br
 		      = link_to 'github source', 'https://github.com/islandpress/gc_openstates_mashup_dataprep', class: 'form-box__link', target: '_blank'
 	        h4
@@ -96,7 +102,7 @@
 			.div class="col-xs-24 col-xs-offset-1"
               p
           		| On page 1, select one or more states on the left and view the corresponding number of climate change bills and GC organization profiles. 
-          		| On page 2 and 3, respectively, view the names of specific organizations and climate bills for a given state.
+          		| On page 2 and 3, respectively, view the names of specific climate bills and organizations for a given state.
 			  <iframe width="1000" height="620" src="https://gc-openstates-mashup.herokuapp.com/index.html"></iframe>
 			  </p>
 
