@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.3.2'
 
+gem 'nokogiri', '~> 1.8.1'
+gem 'rack-protection', '~> 2.0.0'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'aws-sdk', '~> 2'
 gem 'bootstrap-sass', '~> 3.3.7'
@@ -61,7 +63,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.5'
   gem 'rspec-wait'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.49.0'
   gem 'rubocop-rspec'
   gem 'shoulda'
   gem 'pundit-matchers', '~> 1.1.0'
